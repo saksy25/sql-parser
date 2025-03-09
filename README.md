@@ -58,10 +58,10 @@ git clone https://github.com/yourusername/sql-parser.git
 cd sql-parser
 
 # run the commands
-flex code.l
-bison -dy code.y
-gcc lex.yy.c y.tab.c -o code.exe
-code.exe
+flex lexer.l
+bison -dy parser.y
+gcc lex.yy.c y.tab.c -o parser.exe
+parser.exe
 ```
 
 ## Usage
@@ -116,14 +116,14 @@ ALTER TABLE employees MODIFY COLUMN name VARCHAR(100);
 
 ### Lexical Analysis
 
-The lexer (implemented in `code.l`) recognizes:
+The lexer (implemented in `lexer.l`) recognizes:
 - SQL keywords (CREATE, TABLE, INT, etc.)
 - Identifiers (table and column names)
 - Numbers, symbols, and delimiters
 
 ### Grammar Rules
 
-The parser (implemented in `code.y`) contains grammar rules for:
+The parser (implemented in `parser.y`) contains grammar rules for:
 - CREATE TABLE statements with column definitions
 - DROP and TRUNCATE TABLE statements
 - ALTER TABLE statements with different actions (ADD, DROP, MODIFY)
