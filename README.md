@@ -25,7 +25,6 @@ sql-parser/
 ├── lexer.l           # Flex file for lexical analysis
 ├── parser.y          # Bison file for grammar rules and semantic actions
 ├── README.md         # Project documentation
-└── examples/         # Sample SQL queries for testing
 ```
 
 ## How It Works
