@@ -60,8 +60,8 @@ cd sql-parser
 # run the commands
 flex lexer.l
 bison -dy parser.y
-gcc lex.yy.c y.tab.c -o parser.exe
-parser.exe
+gcc lex.yy.c y.tab.c -o parse.exe
+parse.exe
 ```
 
 ## Usage
